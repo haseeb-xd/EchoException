@@ -36,6 +36,20 @@ jobs:
       pluginVerifierHomeDir: ${{ steps.properties.outputs.pluginVerifierHomeDir }}
     steps:
 
+      # Free Up Space
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker image ls -aq | xargs --no-run-if-empty docker rmi -f
+          docker volume prune -f
+          docker system prune -a -f
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo rm -rf ~/.cache/*
+          df -h
+        shell: bash
+
       # Check out the current repository
       - name: Fetch Sources
         uses: actions/checkout@v4
