@@ -61,6 +61,12 @@ jobs:
           distribution: zulu
           java-version: 21
 
+      # Increase Java Heap size for Gradle tasks
+      - name: Increase Java Heap Size
+        run: |
+          echo "GRADLE_OPTS=-Xmx2g" >> $GITHUB_ENV
+          echo "JAVA_OPTS=-Xmx2g" >> $GITHUB_ENV
+
       # Setup Gradle
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
