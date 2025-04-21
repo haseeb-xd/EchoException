@@ -61,11 +61,11 @@ jobs:
           distribution: zulu
           java-version: 21
 
-      # Increase Java Heap size for Gradle tasks
+    # Increase Java Heap size for Gradle tasks
       - name: Increase Java Heap Size
         run: |
-          echo "GRADLE_OPTS=-Xmx6g" >> $GITHUB_ENV
-          echo "JAVA_OPTS=-Xmx6g" >> $GITHUB_ENV
+          echo "GRADLE_OPTS=-Xmx8g -XX:MaxMetaspaceSize=2g -XX:+HeapDumpOnOutOfMemoryError" >> $GITHUB_ENV
+          echo "JAVA_OPTS=-Xmx8g -XX:MaxMetaspaceSize=2g" >> $GITHUB_ENV
 
       # Setup Gradle
       - name: Setup Gradle
