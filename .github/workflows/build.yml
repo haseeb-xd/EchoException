@@ -64,8 +64,8 @@ jobs:
       # Increase Java Heap size for Gradle tasks
       - name: Increase Java Heap Size
         run: |
-          echo "GRADLE_OPTS=-Xmx4g" >> $GITHUB_ENV
-          echo "JAVA_OPTS=-Xmx4g" >> $GITHUB_ENV
+          echo "GRADLE_OPTS=-Xmx6g" >> $GITHUB_ENV
+          echo "JAVA_OPTS=-Xmx6g" >> $GITHUB_ENV
 
       # Setup Gradle
       - name: Setup Gradle
