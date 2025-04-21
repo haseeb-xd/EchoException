@@ -9,7 +9,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.haseebxd.echoexception.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.haseebxd.echoexception.toolWindow.MyToolWindowFactory" id="EchoException" anchor="right"/>
         <postStartupActivity implementation="com.github.haseebxd.echoexception.startup.MyProjectActivity" />
     </extensions>
 </idea-plugin>
