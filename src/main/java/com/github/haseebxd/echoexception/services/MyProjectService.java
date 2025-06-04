@@ -1,9 +1,9 @@
 package com.github.haseebxd.echoexception.services;
 
+import com.github.haseebxd.echoexception.MyBundle;
 import com.intellij.openapi.components.Service;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
-import com.github.haseebxd.echoexception.MyBundle;
 
 @Service(Service.Level.PROJECT)
 public final class MyProjectService {
