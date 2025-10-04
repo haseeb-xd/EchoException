@@ -1,8 +1,4 @@
-package com.github.haseebxd.echoexception.factory;
-
-import com.github.haseebxd.echoexception.tab.SoundTab;
-import com.github.haseebxd.echoexception.tab.ToolTab;
-import com.github.haseebxd.echoexception.tab.VisualTab;
+package com.github.haseebxd.echoexception.ui.tabs;
 
 import java.util.List;
 
@@ -14,7 +10,8 @@ public class ToolTabFactory {
     public static List<ToolTab> getTabs() {
         return List.of(
                 new SoundTab(),
-                new VisualTab()
+                new AchievementTab()
+                // Add other tabs here as needed
         );
     }
 }

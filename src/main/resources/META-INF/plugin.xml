@@ -9,7 +9,17 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.haseebxd.echoexception.toolWindow.EchoExceptionToolWindowFactory" id="EchoException" anchor="right"/>
-        <postStartupActivity implementation="com.github.haseebxd.echoexception.startup.MyProjectActivity" />
+        <postStartupActivity implementation="com.github.haseebxd.echoexception.startup.EchoExceptionStartupActivity" />
+        <applicationService serviceImplementation="com.github.haseebxd.echoexception.services.settings.SoundSettings"/>
+
+        <notificationGroup
+                id="EchoException Notifications"
+                displayType="BALLOON"
+                key="notification.group.echoexception.notifications"/>
+
+        <projectConfigurable instance="com.github.haseebxd.echoexception.ui.setting.EchoExceptionConfigurable"
+                                 displayName="Echo Exception"
+                                 id="com.github.haseebxd.echoexception.settings"
+                                 parentId="tools"/>
     </extensions>
 </idea-plugin>

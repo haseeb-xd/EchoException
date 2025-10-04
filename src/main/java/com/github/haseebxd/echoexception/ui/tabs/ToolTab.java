@@ -1,4 +1,4 @@
-package com.github.haseebxd.echoexception.tab;
+package com.github.haseebxd.echoexception.ui.tabs;
 
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
