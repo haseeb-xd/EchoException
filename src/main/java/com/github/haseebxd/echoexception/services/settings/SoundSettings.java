@@ -1,5 +1,6 @@
-package com.github.haseebxd.echoexception.settings;
+package com.github.haseebxd.echoexception.services.settings;
 
+import com.github.haseebxd.echoexception.sound.GameSoundType;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.Service;
@@ -20,32 +21,41 @@ public final class SoundSettings implements PersistentStateComponent<SoundSettin
     private State state = new State();
 
     public static class State {
-        private boolean enabled = true;
+        private boolean soundEnabled = true;
+        private boolean notificationEnabled = true;
         private int volume = 50;
-        private String soundType = "Counter-Strike";
+        private GameSoundType soundType = GameSoundType.SATORU_GOJO;
 
-        public boolean isEnabled() {
-            return enabled;
+        public boolean isSoundEnabled() {
+            return soundEnabled;
         }
 
         public int getVolume() {
             return volume;
         }
 
-        public String getSoundType() {
-            return soundType;
-        }
-
-        public void setEnabled(boolean enabled) {
-            this.enabled = enabled;
+        public void setSoundEnabled(boolean soundEnabled) {
+            this.soundEnabled = soundEnabled;
         }
 
         public void setVolume(int volume) {
             this.volume = volume;
         }
 
-        public void setSoundType(String soundType) {
+        public GameSoundType getSoundType() {
+            return soundType;
+        }
+
+        public void setSoundType(GameSoundType soundType) {
             this.soundType = soundType;
+        }
+
+        public boolean isNotificationEnabled() {
+            return notificationEnabled;
+        }
+
+        public void setNotificationEnabled(boolean notificationEnabled) {
+            this.notificationEnabled = notificationEnabled;
         }
     }
 
@@ -59,12 +69,12 @@ public final class SoundSettings implements PersistentStateComponent<SoundSettin
         this.state = state;
     }
 
-    public boolean isEnabled() {
-        return state.isEnabled();
+    public boolean isSoundEnabled() {
+        return state.isSoundEnabled();
     }
 
-    public void setEnabled(boolean enabled) {
-        state.setEnabled(enabled);
+    public void setSoundEnabled(boolean enabled) {
+        state.setSoundEnabled(enabled);
     }
 
     public int getVolume() {
@@ -75,15 +85,23 @@ public final class SoundSettings implements PersistentStateComponent<SoundSettin
         state.setVolume(volume);
     }
 
-    public String getSoundType() {
+    public GameSoundType getSoundType() {
         return state.getSoundType();
     }
 
-    public void setSoundType(String soundType) {
+    public void setSoundType(GameSoundType soundType) {
         state.setSoundType(soundType);
     }
 
     public static SoundSettings getInstance() {
         return ApplicationManager.getApplication().getService(SoundSettings.class);
+    }
+
+    public boolean isNotificationEnabled() {
+        return state.isNotificationEnabled();
+    }
+
+    public void setNotificationEnabled(boolean notificationEnabled) {
+        state.setNotificationEnabled(notificationEnabled);
     }
 }
