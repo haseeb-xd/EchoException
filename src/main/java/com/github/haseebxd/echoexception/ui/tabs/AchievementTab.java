@@ -48,16 +48,16 @@ public class AchievementTab implements ToolTab {
         JBTabbedPane tabbedPane = new JBTabbedPane();
         
         // Overview tab
-        tabbedPane.addTab("🏠 Overview", createOverviewPanel());
+        tabbedPane.addTab("Overview", createOverviewPanel());
         
         // Unlocked achievements tab
-        tabbedPane.addTab("🏆 Unlocked", createUnlockedAchievementsPanel());
+        tabbedPane.addTab("Unlocked", createUnlockedAchievementsPanel());
         
         // Progress tab
-        tabbedPane.addTab("📈 Progress", createProgressPanel());
+        tabbedPane.addTab("Progress", createProgressPanel());
         
         // Statistics tab
-        tabbedPane.addTab("📊 Statistics", createStatisticsPanel());
+        tabbedPane.addTab("Statistics", createStatisticsPanel());
 
         mainPanel.add(tabbedPane, BorderLayout.CENTER);
         return mainPanel;
@@ -68,8 +68,8 @@ public class AchievementTab implements ToolTab {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         // Header
-        JBLabel headerLabel = new JBLabel("Achievement overview");
-        headerLabel.setFont(JBFont.h1().asBold());
+        JBLabel headerLabel = new JBLabel("Achievement Overview");
+        headerLabel.setFont(JBFont.h1());
         headerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(headerLabel);
         panel.add(Box.createVerticalStrut(SPACING));
@@ -87,8 +87,8 @@ public class AchievementTab implements ToolTab {
 
         // Recent achievements
         if (!unlockedAchievements.isEmpty()) {
-            JBLabel recentLabel = new JBLabel("🎉 Recent Achievements");
-            recentLabel.setFont(JBFont.h3().asBold());
+            JBLabel recentLabel = new JBLabel("Recent Achievements");
+            recentLabel.setFont(JBFont.h3());
             recentLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             panel.add(recentLabel);
             panel.add(Box.createVerticalStrut(5));
@@ -121,7 +121,6 @@ public class AchievementTab implements ToolTab {
         } else {
             JBPanel<JBPanel<?>> contentPanel = new JBPanel<>();
             contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-            contentPanel.setBorder(JBUI.Borders.empty(10));
             
             for (Achievement achievement : unlockedAchievements) {
                 contentPanel.add(createAchievementCard(achievement, true));
@@ -153,7 +152,6 @@ public class AchievementTab implements ToolTab {
         } else {
             JBPanel<JBPanel<?>> contentPanel = new JBPanel<>();
             contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-            contentPanel.setBorder(JBUI.Borders.empty(10));
             
             for (Map.Entry<String, Integer> entry : exceptionCounts.entrySet()) {
                 String exceptionType = entry.getKey();
@@ -181,8 +179,8 @@ public class AchievementTab implements ToolTab {
         headerPanel.setLayout(new BoxLayout(headerPanel, BoxLayout.Y_AXIS));
         headerPanel.setBorder(JBUI.Borders.emptyBottom(20));
 
-        JBLabel headerLabel = new JBLabel("\uD83D\uDCCA exception statistics");
-        headerLabel.setFont(JBFont.h1().asBold());
+        JBLabel headerLabel = new JBLabel("Exception Statistics");
+        headerLabel.setFont(JBFont.h1());
         headerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         headerPanel.add(headerLabel);
 
@@ -201,7 +199,6 @@ public class AchievementTab implements ToolTab {
         } else {
             JBPanel<JBPanel<?>> contentPanel = new JBPanel<>();
             contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-            contentPanel.setBorder(JBUI.Borders.empty(10));
 
             // Total exceptions card
             int totalExceptions = exceptionCounts.getOrDefault("TOTAL", 0);
@@ -210,8 +207,8 @@ public class AchievementTab implements ToolTab {
             contentPanel.add(Box.createVerticalStrut(20));
 
             // Exception breakdown header
-            JBLabel breakdownLabel = new JBLabel("Exception breakdown");
-            breakdownLabel.setFont(JBFont.h2().asBold());
+            JBLabel breakdownLabel = new JBLabel("Exception Breakdown");
+            breakdownLabel.setFont(JBFont.h2());
             breakdownLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             contentPanel.add(breakdownLabel);
             contentPanel.add(Box.createVerticalStrut(15));
@@ -265,19 +262,19 @@ public class AchievementTab implements ToolTab {
         ));
 
         JBLabel iconLabel = new JBLabel(icon);
-        iconLabel.setFont(JBFont.h0().asBold());
+        iconLabel.setFont(JBFont.h0());
         iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         card.add(iconLabel);
         card.add(Box.createVerticalStrut(5));
 
         JBLabel valueLabel = new JBLabel(value);
-        valueLabel.setFont(JBFont.h1().asBold());
+        valueLabel.setFont(JBFont.h1());
         valueLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         card.add(valueLabel);
         card.add(Box.createVerticalStrut(5));
 
         JBLabel titleLabel = new JBLabel(title);
-        titleLabel.setFont(JBFont.h4().asBold());
+        titleLabel.setFont(JBFont.h4());
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         card.add(titleLabel);
 
@@ -288,10 +285,7 @@ public class AchievementTab implements ToolTab {
         JBPanel<JBPanel<?>> card = new JBPanel<>(new BorderLayout());
         
         // Set card appearance based on unlock status
-        card.setBorder(JBUI.Borders.compound(
-                JBUI.Borders.customLine(JBUI.CurrentTheme.DefaultTabs.borderColor(), 2),
-                JBUI.Borders.empty(15)
-        ));
+        card.setBorder(JBUI.Borders.empty(15));
 
         // Left side - icon and type
         JBPanel<JBPanel<?>> leftPanel = new JBPanel<>();
@@ -300,13 +294,13 @@ public class AchievementTab implements ToolTab {
         leftPanel.setBorder(JBUI.Borders.emptyRight(15));
 
         JBLabel iconLabel = new JBLabel(achievement.getIcon());
-        iconLabel.setFont(JBFont.h0().asBold());
+        iconLabel.setFont(JBFont.h0());
         iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         leftPanel.add(iconLabel);
         leftPanel.add(Box.createVerticalStrut(5));
 
         JBLabel typeLabel = new JBLabel(achievement.getType().getDisplayName());
-        typeLabel.setFont(JBFont.small().asBold());
+        typeLabel.setFont(JBFont.small());
         typeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         leftPanel.add(typeLabel);
 
@@ -316,7 +310,7 @@ public class AchievementTab implements ToolTab {
         centerPanel.setOpaque(false);
 
         JBLabel nameLabel = new JBLabel(achievement.getName());
-        nameLabel.setFont(JBFont.h2().asBold());
+        nameLabel.setFont(JBFont.h2());
         nameLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         centerPanel.add(nameLabel);
         centerPanel.add(Box.createVerticalStrut(3));
@@ -330,7 +324,7 @@ public class AchievementTab implements ToolTab {
         JBPanel<JBPanel<?>> rightPanel = new JBPanel<>();
         rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
         rightPanel.setOpaque(false);
-        rightPanel.setBorder(JBUI.Borders.empty(0, 15, 0, 0));
+        rightPanel.setBorder(JBUI.Borders.emptyLeft(15));
 
         if (isUnlocked) {
             SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy");
@@ -355,25 +349,22 @@ public class AchievementTab implements ToolTab {
 
     private JPanel createProgressCard(AchievementProgress progress) {
         JBPanel<JBPanel<?>> card = new JBPanel<>(new BorderLayout());
-        card.setBorder(JBUI.Borders.compound(
-                JBUI.Borders.customLine(JBUI.CurrentTheme.DefaultTabs.borderColor(), 2),
-                JBUI.Borders.empty(15)
-        ));
+        card.setBorder(JBUI.Borders.empty(15));
 
         // Header
         JBLabel headerLabel = new JBLabel(progress.getExceptionType() + " Progress");
-        headerLabel.setFont(JBFont.h2().asBold());
+        headerLabel.setFont(JBFont.h2());
         card.add(headerLabel, BorderLayout.NORTH);
 
         // Progress content
         JBPanel<JBPanel<?>> contentPanel = new JBPanel<>();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setOpaque(false);
-        contentPanel.setBorder(JBUI.Borders.empty(10, 0, 0, 0));
+        contentPanel.setBorder(JBUI.Borders.emptyTop(10));
 
         // Current count
         JBLabel countLabel = new JBLabel("Current: " + progress.getCurrentCount());
-        countLabel.setFont(JBFont.h3().asBold());
+        countLabel.setFont(JBFont.h3());
         contentPanel.add(countLabel);
 
         // Next achievement
@@ -395,7 +386,7 @@ public class AchievementTab implements ToolTab {
             contentPanel.add(progressBar);
         } else {
             JBLabel completeLabel = new JBLabel("All achievements unlocked! 🎉");
-            completeLabel.setFont(JBFont.h3().asBold());
+            completeLabel.setFont(JBFont.h3());
             contentPanel.add(completeLabel);
         }
 
@@ -406,10 +397,7 @@ public class AchievementTab implements ToolTab {
 
     private JBPanel createTotalStatsCard(int totalExceptions) {
         JBPanel<JBPanel<?>> card = new JBPanel<>(new BorderLayout());
-        card.setBorder(JBUI.Borders.compound(
-                JBUI.Borders.customLine(JBUI.CurrentTheme.DefaultTabs.borderColor(), 2),
-                JBUI.Borders.empty(20)
-        ));
+        card.setBorder(JBUI.Borders.empty(20));
 
         // Left side - icon
         JBPanel<JBPanel<?>> leftPanel = new JBPanel<>();
@@ -417,7 +405,7 @@ public class AchievementTab implements ToolTab {
         leftPanel.setOpaque(false);
 
         JBLabel iconLabel = new JBLabel("🎯");
-        iconLabel.setFont(JBFont.h0().asBold());
+        iconLabel.setFont(JBFont.h0());
         iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         leftPanel.add(iconLabel);
 
@@ -427,13 +415,13 @@ public class AchievementTab implements ToolTab {
         centerPanel.setOpaque(false);
 
         JBLabel totalLabel = new JBLabel("Total Exceptions");
-        totalLabel.setFont(JBFont.h2().asBold());
+        totalLabel.setFont(JBFont.h2());
         totalLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         centerPanel.add(totalLabel);
         centerPanel.add(Box.createVerticalStrut(5));
 
         JBLabel countLabel = new JBLabel(String.valueOf(totalExceptions));
-        countLabel.setFont(JBFont.h0().asBold());
+        countLabel.setFont(JBFont.h0());
         countLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         centerPanel.add(countLabel);
 
@@ -456,20 +444,17 @@ public class AchievementTab implements ToolTab {
 
     private JBPanel createExceptionStatCard(String exceptionType, int count) {
         JBPanel<JBPanel<?>> card = new JBPanel<>(new BorderLayout());
-        card.setBorder(JBUI.Borders.compound(
-                JBUI.Borders.customLine(JBUI.CurrentTheme.DefaultTabs.borderColor(), 1),
-                JBUI.Borders.empty(15)
-        ));
+        card.setBorder(JBUI.Borders.empty(15));
 
         // Left side - exception icon
         JBPanel<JBPanel<?>> leftPanel = new JBPanel<>();
         leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.Y_AXIS));
         leftPanel.setOpaque(false);
-        leftPanel.setBorder(JBUI.Borders.empty(0, 0, 0, 15));
+        leftPanel.setBorder(JBUI.Borders.emptyRight(15));
 
         String icon = getExceptionIcon(exceptionType);
         JBLabel iconLabel = new JBLabel(icon);
-        iconLabel.setFont(JBFont.h2().asBold());
+        iconLabel.setFont(JBFont.h2());
         iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         leftPanel.add(iconLabel);
 
@@ -479,7 +464,7 @@ public class AchievementTab implements ToolTab {
         centerPanel.setOpaque(false);
 
         JBLabel nameLabel = new JBLabel(exceptionType);
-        nameLabel.setFont(JBFont.h3().asBold());
+        nameLabel.setFont(JBFont.h3());
         nameLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         centerPanel.add(nameLabel);
         centerPanel.add(Box.createVerticalStrut(3));
@@ -493,14 +478,14 @@ public class AchievementTab implements ToolTab {
         JBPanel<JBPanel<?>> rightPanel = new JBPanel<>();
         rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
         rightPanel.setOpaque(false);
-        rightPanel.setBorder(JBUI.Borders.empty(0, 15, 0, 0));
+        rightPanel.setBorder(JBUI.Borders.emptyLeft(15));
 
         JBLabel countLabel = new JBLabel(String.valueOf(count));
-        countLabel.setFont(JBFont.h1().asBold());
+        countLabel.setFont(JBFont.h1());
         countLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
         rightPanel.add(countLabel);
 
-        JBLabel unitLabel = new JBLabel("times");
+        JBLabel unitLabel = new JBLabel("Times");
         unitLabel.setFont(JBFont.small());
         unitLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
         rightPanel.add(unitLabel);
@@ -529,6 +514,7 @@ public class AchievementTab implements ToolTab {
             case "UnsupportedOperationException" -> "❌";
             case "NumberFormatException" -> "🔢";
             case "IndexOutOfBoundsException" -> "📍";
+            case "ArithmeticException" -> "🧮";
             default -> "❓";
         };
     }
@@ -550,6 +536,7 @@ public class AchievementTab implements ToolTab {
             case "UnsupportedOperationException" -> "Operation not supported";
             case "NumberFormatException" -> "Invalid number format";
             case "IndexOutOfBoundsException" -> "Index out of valid range";
+            case "ArithmeticException" -> "Arithmetic operation failed";
             default -> "Unknown exception type";
         };
     }

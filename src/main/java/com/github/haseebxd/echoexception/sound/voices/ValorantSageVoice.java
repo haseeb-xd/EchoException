@@ -21,15 +21,15 @@ public class ValorantSageVoice implements VoicePack{
         exceptionSoundMap.put(IllegalStateException.class, "voice-packs/valorant-sage/illegal-state-exception-sage.wav");
 
         // Notification messages
-        exceptionToastMap.put(NullPointerException.class, "SAGE line.");
-        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "Index is out of bounds. Check your six.");
-        exceptionToastMap.put(ArithmeticException.class, "Sage: Divide by zero? Let's not blow things up... yet.");
-        exceptionToastMap.put(NumberFormatException.class, "That's not a number! Try aiming again.");
-        exceptionToastMap.put(IllegalArgumentException.class, "Bad argument. Are you even trying?");
-        exceptionToastMap.put(IOException.class, "IO failed. Sounds like a jammed comms line.");
-        exceptionToastMap.put(ClassNotFoundException.class, "Missing class? Request backup immediately.");
-        exceptionToastMap.put(StackOverflowError.class, "Stack overflow! Too many calculations. Retreat!");
-        exceptionToastMap.put(IllegalStateException.class, "Illegal state? Looks like chaos out there.");
+        exceptionToastMap.put(NullPointerException.class, "Null Pointer Exception. That's not something I can revive.");
+        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "Array Index Out Of Bounds Exception. You tried to push beyond your limits and failed.");
+        exceptionToastMap.put(ArithmeticException.class, "Arithmetic Exception! Divide by zero again, I can't revive your logic every time");
+        exceptionToastMap.put(NumberFormatException.class, "Number Format Exception. That’s not a number, no matter how much you believe in it.");
+        exceptionToastMap.put(IllegalArgumentException.class, "Illegal Argument Exception. That input wasn’t meant to be… not even I can purify that.");
+        exceptionToastMap.put(IOException.class, "IO Exception. I felt that disconnect. Something isn’t reaching through.");
+        exceptionToastMap.put(ClassNotFoundException.class, "Class Not Found Exception. I can’t heal what doesn’t exist.");
+        exceptionToastMap.put(StackOverflowError.class, "Stack Overflow Error. You pushed too hard. Even my barrier has limits.");
+        exceptionToastMap.put(IllegalStateException.class, "Illegal State Exception. You're out of step… the rhythm is broken.");
     }
 
     @Override

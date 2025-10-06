@@ -24,15 +24,15 @@ public class GojoVoice implements VoicePack {
         EXCEPTION_SOUND_MAP.put(FileNotFoundException.class, "voice-packs/jujutsu-kaisen-gojo/io-exception-gojo.wav");
 
 
-        exceptionToastMap.put(NullPointerException.class, "NullPointer huh? Keep your objects alive, rookie.");
-        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "Index is out of bounds. Check your six.");
-        exceptionToastMap.put(ArithmeticException.class, "Divide by zero? Let's not blow things up... yet.");
-        exceptionToastMap.put(NumberFormatException.class, "That's not a number! Try aiming again.");
-        exceptionToastMap.put(IllegalArgumentException.class, "Bad argument. Are you even trying?");
-        exceptionToastMap.put(IOException.class, "IO failed. Sounds like a jammed comms line.");
-        exceptionToastMap.put(ClassNotFoundException.class, "Missing class? Request backup immediately.");
-        exceptionToastMap.put(StackOverflowError.class, "Stack overflow! Too many calculations. Retreat!");
-        exceptionToastMap.put(IllegalStateException.class, "Illegal state? Looks like chaos out there.");
+        exceptionToastMap.put(NullPointerException.class, "Null again. What are you! Blindfolded like me but without the power?");
+        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "That index doesn’t exist. like your chances against me.");
+        exceptionToastMap.put(ArithmeticException.class, "Tried to flex on math and got snapped rookie move.");
+        exceptionToastMap.put(NumberFormatException.class, "You gave numbers a panic attack. Nice..");
+        exceptionToastMap.put(IllegalArgumentException.class, "That’s the best argument you’ve got? Pathetic.");
+        exceptionToastMap.put(IOException.class, "The system said 'no.' Even your files are scared of you.");
+        exceptionToastMap.put(ClassNotFoundException.class, "Class not found? Guess even your code knows what’s out of its league.");
+        exceptionToastMap.put(StackOverflowError.class, "Ah! Too deep for your own good? Even infinity has its limits.");
+        exceptionToastMap.put(IllegalStateException.class, "Code’s out of state, just like your sense of direction.");
     }
 
     @Override
