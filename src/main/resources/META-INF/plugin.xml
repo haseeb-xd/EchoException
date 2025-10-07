@@ -1,8 +1,55 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.haseebxd.echoexception</id>
-    <name>EchoException</name>
-    <vendor>haseeb-xd</vendor>
+    <name>Echo Exception</name>
+    <vendor email="haseebansari1000@gmail.com" url="https://github.com/haseeb-xd/EchoException">
+        Haseeb Ansari
+    </vendor>
+
+    <description><![CDATA[
+<h2> Echo Exception - Your Exceptions Have Never Sounded This Epic!</h2>
+
+<p>Transform boring stack traces into legendary moments. When your code throws an exception, hear it announced by iconic characters with epic voice packs and notifications.</p>
+
+<h3>✨ Features:</h3>
+<ul>
+    <li>🔊 <b>Epic Voice Announcements</b> - Hear exceptions called out by Satoru Gojo or Sage from Valorant</li>
+    <li>🔔 <b>Notifications</b> - Visual popups appear in sync with audio announcements</li>
+    <li>🏆 <b>Achievement System</b> - Track your debugging journey and unlock milestones</li>
+    <li>🎚️ <b>Voice Pack Selection</b> - Choose between Gojo's chaotic confidence or Sage's tactical precision</li>
+    <li>⚙️ <b>Full Customization</b> - Adjust volume, enable/disable sounds and notifications independently</li>
+    <li>🎯 <b>Smart Detection</b> - Automatically catches exceptions from Run/Debug console</li>
+    <li>🌈 <b>Exception Stats</b> - View total exceptions encountered and progress per type</li>
+</ul>
+
+<h3>🎭 Available Voice Packs:</h3>
+<ul>
+    <li><b>Satoru Gojo</b> (Jujutsu Kaisen) - Calm, confident, and perfectly dramatic</li>
+    <li><b>Sage</b> (Valorant) - Sharp, tactical, and precisely timed callouts</li>
+    <li>More characters coming soon!</li>
+</ul>
+
+<h3>🏆 Achievement System:</h3>
+<p>Track your debugging milestones:</p>
+<ul>
+    <li>First exception caught</li>
+    <li>10+ NullPointerExceptions</li>
+    <li>View total exceptions and progress in Settings</li>
+</ul>
+
+<h3>💡 Perfect For:</h3>
+<ul>
+    <li>Developers who miss exceptions in console spam</li>
+    <li>Live coders and streamers wanting entertaining debugging</li>
+    <li>Teams looking to add personality to their workflow</li>
+    <li>Anyone tired of silent exceptions</li>
+</ul>
+
+<h3>🛠️ Works With:</h3>
+<p>All JVM languages: Java, Kotlin, Scala, Groovy, and more. Compatible with all IntelliJ Platform-based IDEs.</p>
+
+<p><b>Configure at:</b> Settings → Tools → Echo Exception</p>
+]]></description>
 
     <depends>com.intellij.modules.platform</depends>
 
