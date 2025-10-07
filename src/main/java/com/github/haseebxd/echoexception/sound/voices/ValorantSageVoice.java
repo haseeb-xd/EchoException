@@ -37,12 +37,12 @@ public class ValorantSageVoice implements VoicePack{
 
     @Override
     public String getSoundForException(Class<? extends Throwable> exceptionType) {
-        return exceptionSoundMap.getOrDefault(exceptionType, "voice-packs/cs/default_bang.wav");
+        return exceptionSoundMap.getOrDefault(exceptionType, "voice-packs/valorant-sage/default-sage.wav");
     }
 
     @Override
     public String getNotificationForException(Class<? extends Throwable> exceptionType) {
-        return exceptionToastMap.getOrDefault(exceptionType, "Something exploded. Keep it cool.");
+        return exceptionToastMap.getOrDefault(exceptionType, "Sage: Another bug in your code. Patch it up, and let’s move again");
     }
 
 

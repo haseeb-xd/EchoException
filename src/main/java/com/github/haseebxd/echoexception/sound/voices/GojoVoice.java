@@ -38,11 +38,11 @@ public class GojoVoice implements VoicePack {
 
     @Override
     public String getSoundForException(Class<? extends Throwable> exceptionType) {
-        return EXCEPTION_SOUND_MAP.getOrDefault(exceptionType, "voice-packs/cs/default_bang.wav");
+        return EXCEPTION_SOUND_MAP.getOrDefault(exceptionType, "voice-packs/jujutsu-kaisen-gojo/default-gojo.wav");
     }
 
     @Override
     public String getNotificationForException(Class<? extends Throwable> exceptionType) {
-        return exceptionToastMap.getOrDefault(exceptionType, "Something exploded. Keep it cool.");
+        return exceptionToastMap.getOrDefault(exceptionType, "Gojo: Ahh! I could fix it, but where’s the fun in that?");
     }
 }
