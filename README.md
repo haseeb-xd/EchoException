@@ -31,17 +31,25 @@ Echo Exception is an IntelliJ plugin that announces your exceptions like a fight
 It's debugging, but make it cinematic.
 
 ---
-
 <!-- Plugin description -->
-Echo Exception transforms mundane stack traces into memorable moments. Instead of silently reading error messages, hear them announced by iconic characters with custom voice packs. Visual notifications pop up in sync with the audio, making exception handling feel less like a chore and more like an event.
+Echo Exception turns boring stack traces into epic moments with character voice announcements and visual notifications.
 
-Currently featuring voice packs from Satoru Gojo (Jujutsu Kaisen) and Sage (Valorant), with more characters coming soon. Perfect for developers who want personality in their debugging workflow, live coders, streamers, or anyone who's tired of silent exceptions.
+When your code throws a NullPointerException, hear Satoru Gojo's confident callout or Sage's tactical warning. No more silently scrolling past errors—every exception gets the dramatic entrance it deserves.
 
-**Key Features:**
-- Audible exception announcements with character voices
-- Animated toast notifications that appear on exception detection
-- Multiple voice packs: Gojo's chaotic confidence and Sage's precise callouts
-- Fully configurable settings for volume, notifications, and voice selection
+**What You Get:**
+- Voice announcements from iconic characters (Gojo from Jujutsu Kaisen, Sage from Valorant)
+- Notifications that pop up on exception detection
+- Achievement system to track your debugging journey
+- Full volume and notification controls
+- Works with Java, Kotlin, Scala, and all JVM languages
+
+**Perfect For:**
+- Developers tired of missing exceptions in console output
+- Live coders and streamers who want entertaining debugging
+- Teams looking to add personality to their workflow
+- Anyone who's ever screamed at a NullPointerException
+
+More voice packs coming soon. Your exceptions have never sounded this good.
 <!-- Plugin description end -->
 
 ---
