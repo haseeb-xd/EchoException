@@ -16,75 +16,55 @@
     </a>
   </p>
 
-  [Features](#-features) • [Installation](#-installation) • [Settings](#%EF%B8%8F-settings) • [Contributing](#-contributing)
 
 </div>
 
 ---
 
-## What's This About?
-
-Your `NullPointerException` just became a main character moment.
-
-Echo Exception is an IntelliJ plugin that announces your exceptions like a fighting game character entering the arena. When your code crashes, **Satoru Gojo** might casually remind you about that null pointer, or **Sage** from Valorant will precisely call out your array bounds violation. 
-
-It's debugging, but make it cinematic.
-
----
 <!-- Plugin description -->
-Echo Exception turns boring stack traces into epic moments with character voice announcements and visual notifications.
+<h2> Your Exceptions Have Never Sounded This Epic!</h2>
 
-When your code throws a NullPointerException, hear Satoru Gojo's confident callout or Sage's tactical warning. No more silently scrolling past errors—every exception gets the dramatic entrance it deserves.
+<p>Transform boring stack traces into legendary moments. When your code throws an exception, hear it announced by iconic characters with epic voice packs and notifications.</p>
 
-**What You Get:**
-- Voice announcements from iconic characters (Gojo from Jujutsu Kaisen, Sage from Valorant)
-- Notifications that pop up on exception detection
-- Achievement system to track your debugging journey
-- Full volume and notification controls
-- Works with Java, Kotlin, Scala, and all JVM languages
+<h3>✨ Features:</h3>
+<ul>
+    <li>🔊 <b>Epic Voice Announcements</b> - Hear exceptions called out by Satoru Gojo or Sage from Valorant</li>
+    <li>🔔 <b>Notifications</b> - Visual popups appear in sync with audio announcements</li>
+    <li>🏆 <b>Achievement System</b> - Track your debugging journey and unlock milestones</li>
+    <li>🎚️ <b>Voice Pack Selection</b> - Choose between Gojo's chaotic confidence or Sage's tactical precision</li>
+    <li>⚙️ <b>Full Customization</b> - Adjust volume, enable/disable sounds and notifications independently</li>
+    <li>🎯 <b>Smart Detection</b> - Automatically catches exceptions from Run/Debug console</li>
+    <li>🌈 <b>Exception Stats</b> - View total exceptions encountered and progress per type</li>
+</ul>
 
-**Perfect For:**
-- Developers tired of missing exceptions in console output
-- Live coders and streamers who want entertaining debugging
-- Teams looking to add personality to their workflow
-- Anyone who's ever screamed at a NullPointerException
+<h3>🎭 Available Voice Packs:</h3>
+<ul>
+    <li><b>Satoru Gojo</b> (Jujutsu Kaisen) - Calm, confident, and perfectly dramatic</li>
+    <li><b>Sage</b> (Valorant) - Sharp, tactical, and precisely timed callouts</li>
+    <li>More characters coming soon! </li>
+</ul>
 
-More voice packs coming soon. Your exceptions have never sounded this good.
+<h3>🏆 Achievement System:</h3>
+<p>Track your debugging milestones:</p>
+<ul>
+    <li>First exception caught</li>
+    <li>10+ NullPointerExceptions</li>
+    <li>View total exceptions and progress in Settings</li>
+</ul>
+
+<h3>💡 Perfect For:</h3>
+<ul>
+    <li>Developers who miss exceptions in console spam</li>
+    <li>Live coders and streamers wanting entertaining debugging</li>
+    <li>Teams looking to add personality to their workflow</li>
+    <li>Anyone tired of silent exceptions</li>
+</ul>
+
+<h3>🛠️ Works With:</h3>
+<p>All JVM languages: Java, Kotlin, Scala, Groovy, and more. Compatible with all IntelliJ Platform-based IDEs.</p>
+
+<p><b>Configure at:</b> Settings → Tools → Echo Exception</p>
 <!-- Plugin description end -->
-
----
-
-## Features
-
-### Character Voice Packs
-
-**Satoru Gojo** (Jujutsu Kaisen)  
-Calm, confident, and slightly unhinged. Your exceptions never sounded this powerful.
-
-**Sage** (Valorant)  
-Precise, composed, and tactical. Every exception callout hits with purpose.
-
-More characters incoming. Suggest your favorites in the [issues](https://github.com/haseeb-xd/EchoException/issues).
-
-### Visual Toast Notifications
-
-Clean, theme-aware popups appear in the bottom-right corner when exceptions strike:
-- Shows exception type and custom voice pack messages
-
-### Achievement System
-
-Track your debugging journey with built-in achievements:
-- View all unlocked achievements with progress bars
-- See total exceptions encountered across all sessions
-- Monitor milestone progress for each exception type
-- Celebrate debugging victories with visual feedback
-
-### Full Configuration Control
-
-Access settings at **Settings → Tools → Echo Exception**:
-- Switch between voice packs on the fly
-- Adjust volume from 0-100%
-- Enable/disable sounds independently from notifications
 
 ---
 
