@@ -25,6 +25,10 @@ import java.util.Optional;
  */
 public final class ExceptionConsoleListener extends ProcessAdapter {
     private static final Logger LOG = Logger.getInstance(ExceptionConsoleListener.class);
+    
+    // track last processed exception to prevent duplicate lines
+    private static volatile String lastProcessedException = null;
+    private static volatile long lastProcessedTime = 0;
 
     // Regex pattern to match exception names
     private static final Pattern EXCEPTION_PATTERN = Pattern.compile("\\b(\\w+Exception|\\w+Error)\\b");
@@ -96,10 +100,24 @@ public final class ExceptionConsoleListener extends ProcessAdapter {
         if (matcher.find()) {
             String exceptionName = matcher.group(1);
 
+            // skip if we just processed this same exception within 3 seconds (for duplicate lines)
+            long currentTime = System.currentTimeMillis();
+            if (exceptionName.equals(lastProcessedException) && 
+                (currentTime - lastProcessedTime) < 3000) {
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Skipping duplicate exception line: " + exceptionName);
+                }
+                return;
+            }
+
             if (LOG.isDebugEnabled()) {
                 LOG.debug("Found exception pattern: " + exceptionName);
             }
 
+            // Update last processed exception and time
+            lastProcessedException = exceptionName;
+            lastProcessedTime = currentTime;
+            
             resolveAndTriggerException(exceptionName);
         }
     }

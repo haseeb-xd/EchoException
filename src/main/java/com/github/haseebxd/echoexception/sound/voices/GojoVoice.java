@@ -24,15 +24,16 @@ public class GojoVoice implements VoicePack {
         EXCEPTION_SOUND_MAP.put(FileNotFoundException.class, "voice-packs/jujutsu-kaisen-gojo/io-exception-gojo.wav");
 
 
-        exceptionToastMap.put(NullPointerException.class, "Null again. What are you! Blindfolded like me but without the power?");
-        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "That index doesn’t exist. like your chances against me.");
-        exceptionToastMap.put(ArithmeticException.class, "Tried to flex on math and got snapped rookie move.");
-        exceptionToastMap.put(NumberFormatException.class, "You gave numbers a panic attack. Nice..");
-        exceptionToastMap.put(IllegalArgumentException.class, "That’s the best argument you’ve got? Pathetic.");
-        exceptionToastMap.put(IOException.class, "The system said 'no.' Even your files are scared of you.");
-        exceptionToastMap.put(ClassNotFoundException.class, "Class not found? Guess even your code knows what’s out of its league.");
-        exceptionToastMap.put(StackOverflowError.class, "Ah! Too deep for your own good? Even infinity has its limits.");
-        exceptionToastMap.put(IllegalStateException.class, "Code’s out of state, just like your sense of direction.");
+        exceptionToastMap.put(NullPointerException.class, "Gojo: Null again. What are you! Blindfolded like me but without the power?");
+        exceptionToastMap.put(ArrayIndexOutOfBoundsException.class, "Gojo: That index doesn’t exist. like your chances against me.");
+        exceptionToastMap.put(ArithmeticException.class, "Gojo: Tried to flex on math and got snapped rookie move.");
+        exceptionToastMap.put(NumberFormatException.class, "Gojo: You gave numbers a panic attack. Nice..");
+        exceptionToastMap.put(IllegalArgumentException.class, "Gojo: That’s the best argument you’ve got? Pathetic.");
+        exceptionToastMap.put(IOException.class, "Gojo: The system said 'no.' Even your files are scared of you.");
+        exceptionToastMap.put(ClassNotFoundException.class, "Gojo: Class not found? Guess even your code knows what’s out of its league.");
+        exceptionToastMap.put(StackOverflowError.class, "Gojo: Ah! Too deep for your own good? Even infinity has its limits.");
+        exceptionToastMap.put(IllegalStateException.class, "Gojo: Code’s out of state, just like your sense of direction.");
+        exceptionToastMap.put(FileNotFoundException.class, "Gojo: The system said 'no.' Even your files are scared of you.");
     }
 
     @Override
