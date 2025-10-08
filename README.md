@@ -8,10 +8,10 @@
     <a href="https://github.com/haseeb-xd/EchoException/actions/workflows/build.yml">
       <img src="https://github.com/haseeb-xd/EchoException/workflows/Build/badge.svg" alt="Build Status"/>
     </a>
-    <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID">
+    <a href="https://plugins.jetbrains.com/plugin/28655-echo-exception">
       <img src="https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg" alt="Plugin Version"/>
     </a>
-    <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID">
+    <a href="https://plugins.jetbrains.com/plugin/28655-echo-exception">
       <img src="https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg" alt="Plugin Downloads"/>
     </a>
   </p>
@@ -76,7 +76,7 @@
 3. Click **Install** and restart
 
 ### From JetBrains Website
-Visit [EchoException on JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and click **Install to IDE**.
+Visit [EchoException on JetBrains Marketplace](https://plugins.jetbrains.com/plugin/28655-echo-exception) and click **Install to IDE**.
 
 ### Manual Installation
 1. Download the [latest release](https://github.com/haseeb-xd/EchoException/releases/latest)
