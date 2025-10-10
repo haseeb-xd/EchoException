@@ -1,6 +1,6 @@
 <div align="center">
 
-![echo exception (300 x 300 px)](https://github.com/user-attachments/assets/e98a42e9-b928-4e8b-a450-8c362d616b86)
+![echo exception logo](docs/images/echo-exception-logo.svg)
 
   <h1>Echo Exception</h1>
   <p><strong>Debugging has never sounded this cool.</strong></p>
@@ -9,10 +9,10 @@
       <img src="https://github.com/haseeb-xd/EchoException/workflows/Build/badge.svg" alt="Build Status"/>
     </a>
     <a href="https://plugins.jetbrains.com/plugin/28655-echo-exception">
-      <img src="https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg" alt="Plugin Version"/>
+      <img src="https://img.shields.io/jetbrains/plugin/v/28655-echo-exception.svg" alt="Plugin Version"/>
     </a>
     <a href="https://plugins.jetbrains.com/plugin/28655-echo-exception">
-      <img src="https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg" alt="Plugin Downloads"/>
+      <img src="https://img.shields.io/jetbrains/plugin/d/28655-echo-exception.svg" alt="Plugin Downloads"/>
     </a>
   </p>
 
@@ -147,9 +147,9 @@ org.gradle.jvmargs=-Xmx2g -XX:MaxMetaspaceSize=512m
 
 ## Screenshots
 
-| Exception Announcement | Settings Panel |
-|----------------------|----------------|
-| ![Echo Preview](docs/preview_echo.gif) | ![Settings Preview](docs/preview_settings.png) |
+| Settings                                     | Achievements                                                |
+|----------------------------------------------------|-------------------------------------------------------------|
+| ![Settings Preview](docs/images/settings-panel.svg) | ![Achievements Preview](docs/images/achievements-panel.svg) |
 
 
 ---
