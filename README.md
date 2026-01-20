@@ -21,6 +21,9 @@
 
 ---
 
+
+
+
 <!-- Plugin description -->
 <h2> Your Exceptions Have Never Sounded This Epic!</h2>
 
@@ -61,7 +64,7 @@
 </ul>
 
 <h3>🛠️ Works With:</h3>
-<p>All JVM languages: Java, Kotlin, Scala, Groovy, and more. Compatible with all IntelliJ Platform-based IDEs.</p>
+<p>All JVM languages: Java, Kotlin, Scala, Groovy, and more. Compatible with IntelliJ IDEA IDEs.</p>
 
 <p><b>Configure at:</b> Settings → Tools → Echo Exception</p>
 <!-- Plugin description end -->
@@ -144,6 +147,11 @@ org.gradle.jvmargs=-Xmx2g -XX:MaxMetaspaceSize=512m
 ```
 
 ---
+
+## Demo
+https://github.com/user-attachments/assets/c5907d55-e94f-45dc-8da2-8dfd445cea41
+
+
 
 ## Screenshots
 
